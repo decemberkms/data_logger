@@ -28,6 +28,7 @@ class Logger():
             cnt = len(data)-1
             params = '?' + ',?'*cnt
             cursor.execute(f"INSERT INTO {table} VALUES({params})", data)
+
             conn.commit()
         conn.close()
     
